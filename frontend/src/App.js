@@ -1,9 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import LanguageSelect from "./components/LanguageSelect";
 
 const App = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <h1>Welcome to Pet Shop</h1>
+      <LanguageSelect />
+      <h1>{t("welcome")}</h1>
     </>
   );
 };
